@@ -1,0 +1,5 @@
+/C++/.vs/
+/C++/DnD/x64/
+/C++/x64/
+*.vcxproj.filters
+*.vcxproj.user
