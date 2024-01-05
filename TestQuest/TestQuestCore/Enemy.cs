@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TestQuestCore
 {
-	internal class Enemy : Entity
+	public class Enemy : Entity
 	{
 
 	}

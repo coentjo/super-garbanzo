@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace TestQuestCore
 {
-	internal interface IDefence
+	public interface IDefence
 	{
-        public int DefencePoints { get; protected set; }
+        public int DefencePoints { get; set; }
     }
 }

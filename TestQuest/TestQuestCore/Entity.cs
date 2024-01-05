@@ -6,18 +6,35 @@ using System.Threading.Tasks;
 
 namespace TestQuestCore
 {
-	internal class Entity
+	public class Entity
 	{
         public int Hp { get; private set; }
+		public int AttackDamage 
+		{ get 
+			{
+				return weapon?.AttackDamage ?? 2; 
+			} 
+		}
 
 		protected Weapon? weapon;
 		protected Armour? armour;
 
-		protected Entity(int hp = 10, Weapon? weapon = null, Armour? armour = null)
+		public Entity(int hp = 10, Weapon? weapon = null, Armour? armour = null)
 		{
 			this.Hp = hp;
 			this.weapon = weapon;
 			this.armour = armour;
+		}
+
+		public void Attack(Entity target)
+		{
+			int attackDamage = this.AttackDamage;
+			target.Defend(attackDamage);
+		}
+
+		public void Defend(int attackDamage)
+		{
+			this.Hp -= attackDamage;
 		}
     }
 }

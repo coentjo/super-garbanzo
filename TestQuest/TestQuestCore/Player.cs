@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TestQuestCore
 {
-	internal class Player : Entity
+	public class Player : Entity
 	{
 
 	}

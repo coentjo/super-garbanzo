@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace TestQuestCore
 {
-	internal interface IAttack
+	public interface IAttack
 	{
-        public int AttackDamage { get; protected set; }
+		// Possible fix: turn propery into get and set methods
+		public abstract int AttackDamage { get; }
     }
 }

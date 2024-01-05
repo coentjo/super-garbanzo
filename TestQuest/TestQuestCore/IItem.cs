@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TestQuestCore
 {
-	internal interface IItem
+	public interface IItem
 	{
 
 	}

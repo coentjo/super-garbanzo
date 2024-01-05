@@ -6,8 +6,23 @@ using System.Threading.Tasks;
 
 namespace TestQuestCore
 {
-	internal class Armour : IItem, IDefence
+	public class Armour : IItem, IDefence
 	{
+		int IDefence.DefencePoints
+		{
+			get 
+			{ 
+				throw new NotImplementedException(); 
+			}
+			set
+			{
+				throw new NotImplementedException();
+			}
+		}
 
+		public Armour(int defencePoints)
+		{
+			((IDefence)this).DefencePoints = defencePoints;
+		}
 	}
 }

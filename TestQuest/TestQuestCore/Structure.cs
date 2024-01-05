@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace TestQuestCore
 {
-	internal class Structure
+	// Todo: Is this necessary?
+	public class Structure
 	{
 
 	}
