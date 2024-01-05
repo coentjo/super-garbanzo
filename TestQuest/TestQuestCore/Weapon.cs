@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TestQuestCore
 {
-	internal class Weapon : IItem
+	internal class Weapon : IItem, IAttack
 	{
 
 	}

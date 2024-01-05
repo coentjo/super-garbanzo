@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace TestQuestCore
 {
-	internal class Armour : IItem, IDefence
+	internal interface IAttack
 	{
-
-	}
+        public int AttackDamage { get; protected set; }
+    }
 }
