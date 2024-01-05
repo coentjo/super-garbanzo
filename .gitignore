@@ -3,3 +3,6 @@
 /C++/x64/
 *.vcxproj.filters
 *.vcxproj.user
+/C++/DnDApplication/x64/
+/C++/DndUnitTest/x64/
+/C++/packages/

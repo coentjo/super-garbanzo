@@ -1,21 +1,24 @@
 #pragma once
 
+#include "IArmour.h"
 #include "IItem.h"
 
 namespace DnD {
 
-class Item
-    : public IItem
+class NoArmour :
+    public IArmour,
+    private IItem
 {
 public:
+    NoArmour();
+
+    // Inherited via IArmour
+    virtual int modifyAttack(int damage) const override;
+
     // Inherited via IItem
     virtual int getWeight() const override;
     virtual std::string getName() const override;
 
-    void setWeight(int weight);
-
-private:
-    int m_weight{};
 };
 
 } // namespace DnD

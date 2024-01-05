@@ -12,8 +12,9 @@ std::string Item::getName() const
     return m_name;
 }
 
-Item::Item(const std::string& name)
+Item::Item(const std::string& name, int weight)
     : m_name(name)
+    , m_weight(weight)
 {
 }
 

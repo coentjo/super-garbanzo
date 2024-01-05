@@ -6,8 +6,6 @@
 
 namespace DnD {
 
-class Weapon;
-
 class Character
     : public ICharacter
 {
@@ -15,8 +13,11 @@ public:
     Character();
     virtual ~Character() = default;
 
+    void setHealth(int health);
+    void addHealth(int health);
+
 private:
-    std::unique_ptr<Weapon> m_weapon{};
+    int m_health{};
 };
 
 } // namespace DnD
