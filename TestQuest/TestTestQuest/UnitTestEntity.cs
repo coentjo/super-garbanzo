@@ -21,6 +21,7 @@ namespace TestTestQuest
 
 		[Theory]
 		[InlineData(1, 10, 9)]
+		[InlineData(3, 10, 10)]
 		public void TestDefenceAttack(int defencePoints, int startHp, int expectedHp) 
 		{
 			Entity attacker = new();
@@ -29,7 +30,32 @@ namespace TestTestQuest
 
 			attacker.Attack(defender);
 
-			Assert.Equal(defender.Hp, expectedHp);
+			Assert.Equal(expectedHp, defender.Hp);
+		}
+
+		[Theory]
+		[InlineData(5, 10, 5)]
+		[InlineData(0, 10, 10)]
+		public void TestAugmentedAttack(int attackPoints, int startHp, int expectedHp)
+		{
+			Weapon attackerWeapon = new(attackPoints);
+			Entity attacker = new(weapon: attackerWeapon);
+			Entity defender = new(hp: startHp);
+
+			attacker.Attack(defender);
+
+			Assert.Equal(expectedHp, defender.Hp);
+		}
+
+		[Fact]
+		public void TestAttackDeath() 
+		{
+			Entity attacker = new();
+			Entity defender = new(hp: 1);
+
+			attacker.Attack(defender);
+
+			Assert.Equal(EntityStatus.DEAD, defender.Status);
 		}
 	}
 }

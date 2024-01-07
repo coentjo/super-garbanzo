@@ -6,8 +6,13 @@ using System.Threading.Tasks;
 
 namespace TestQuestCore
 {
-	public interface IDefence
+	internal class NoWeapon : Weapon
 	{
-		public int GetDefencePoints();
+
+
+		public NoWeapon():
+			base(attackDamage: 2) 
+		{ 
+		}
 	}
 }

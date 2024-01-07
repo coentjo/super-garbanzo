@@ -8,21 +8,21 @@ namespace TestQuestCore
 {
 	public class Armour : IItem, IDefence
 	{
-		int IDefence.DefencePoints
-		{
-			get 
-			{ 
-				throw new NotImplementedException(); 
-			}
-			set
-			{
-				throw new NotImplementedException();
-			}
-		}
+		protected int defencePoints;
 
 		public Armour(int defencePoints)
 		{
-			((IDefence)this).DefencePoints = defencePoints;
+			this.defencePoints = defencePoints;
+		}
+
+		public int GetDefencePoints()
+		{
+			return defencePoints;
+		}
+
+		public void SetDefencePoints(int defencePoints)
+		{
+			this.defencePoints = defencePoints;
 		}
 	}
 }
